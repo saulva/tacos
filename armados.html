@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Tacos Acorazados - Armados</title>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body class="light-blue darken-1">
+<!--Barra de Navegación-->
+<div class="navbar-fixed">
+  <nav class="light-blue" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="img/tacologo.png" width="25">&nbsp;Doña Lina</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="clasicos.html">Clásicos</a></li>
+        <li><a href="armados.html">Arma tu Taco!</a></li>
+        <li><a href="ubicacion.html">Ubicación</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav light-blue white-text">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="clasicos.html">Clásicos</a></li>
+        <li><a href="armados.html">Arma tu Taco!</a></li>
+        <li><a href="ubicacion.html">Ubicación</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</div>
+  <!--Contenedor Principal-->
+  <div class="container">
+    <h2 class="white-text center-align">Arma tu taco acorazado</h2>
+    <div class="divider"></div>
+    <div class="col s12 m6 l4">
+      <form>
+        <h5 class="white-text">Tortillas: </h5>
+          <input name="tortillas" type="radio" id="una" checked/>
+          <label class="white-text" for="una">1</label>
+          <input name="tortillas" type="radio" id="dos" />
+          <label class="white-text" for="dos">2</label>
+        <h5 class="white-text">Arroz: </h5>
+          <input name="arroz" type="radio" id="rojo" checked/>
+          <label class="white-text" for="rojo">Rojo</label>
+          <input name="arroz" type="radio" id="blanco"/>
+          <label class="white-text" for="blanco">Blanco</label>
+        <h5 class="white-text">Guisados(hasta 3): </h5>
+        <div id="formulario">
+          <p>
+            <input name="guisados" type="checkbox" id="milanesapollo" onchange="validarChecks(this)"/>
+            <label class="white-text" for="milanesapollo">Milanesa de Pollo</label>
+          </p>
+          <p>
+            <input name="guisados" type="checkbox" id="milanesares" onchange="validarChecks(this)"/>
+            <label class="white-text" for="milanesares">Milanesa de Res</label>
+          </p>
+          <p>
+            <input name="guisados" type="checkbox" id="tortapapa" onchange="validarChecks(this)"/>
+            <label class="white-text" for="tortapapa">Torta de Papa</label>
+          </p>
+          <p>
+            <input name="guisados" type="checkbox" id="tortacarne" onchange="validarChecks(this)"/>
+            <label class="white-text" for="tortacarne">Torta de Carne</label>
+          </p>
+          <p>
+            <input name="guisados" type="checkbox" id="huevo" onchange="validarChecks(this)"/>
+            <label class="white-text" for="huevo">Huevo Cocido</label>
+          </p>
+          <p>
+            <input name="guisados" type="checkbox" id="chile" onchange="validarChecks(this)"/>
+            <label class="white-text" for="chile">Chile Relleno</label>
+          </p>
+          <p>
+            <input name="guisados" type="checkbox" id="chicharron" onchange="validarChecks(this)"/>
+            <label class="white-text" for="chicharron">Chicharrón con Salsa</label>
+          </p>
+          <p>
+            <input name="guisados" type="checkbox" id="manita" onchange="validarChecks(this)"/>
+            <label class="white-text" for="manita">Manita de Cerdo</label>
+          </p>
+          <p>
+            <input name="guisados" type="checkbox" id="mole" onchange="validarChecks(this)"/>
+            <label class="white-text" for="mole">Mole con Pollo</label>
+          </p>
+        </div>
+          <h5 class="white-text">Salsa: </h5>
+            <input name="salsa" type="radio" id="verde" checked/>
+            <label class="white-text" for="verde">Verde</label>
+            <input name="salsa" type="radio" id="roja"/>
+            <label class="white-text" for="roja">Roja</label>
+            <input name="salsa" type="radio" id="sin"/>
+            <label class="white-text" for="sin">Sin salsa</label>
+        <p>
+          <a onclick="mostrarResumen()" class="waves-effect waves-light btn indigo accent-4">
+            <i class="material-icons right">
+              play_arrow
+            </i>
+            Resumir
+          </a>
+        </p>
+      </form>
+      <br>
+    </div>
+    <div class="divider"></div>
+  </div>
+
+  <!--Footer-->
+  <footer class="page-footer light-blue white-text">
+    <div class="container">
+      <div class="row">
+        <div class="col l8 s12">
+          <h5 class="white-text">Tacos acorazados Doña Lina</h5>
+          <p class="grey-text text-lighten-4">
+            Tacos acorazados Doña Lina desde 1996 los mejores tacos acorazados de Morelos, ofreciendo al público en general desde los tradicionales tacos de milanesa, huevo, chile relleno, etc. hasta tacos 'armados' al gusto del cliente.
+          </p>
+        </div>
+        <div class="col l4 s12 white-text">
+          <ul>
+            <li><a class="white-text" href="index.html">Inicio</a></li>
+            <li><a class="white-text" href="clasicos.html">Clásicos</a></li>
+            <li><a class="white-text" href="armados.html">Arma tu Taco!</a></li>
+            <li><a class="white-text" href="ubicacion.html">Ubicación</a></li>
+            <li><a class="white-text" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+            <div class="container">
+            © 2016 - Tacos Doña Lina
+            </div>
+          </div>
+  </footer>
+  <!--  Scripts-->
+  <script type="text/javascript">
+
+    function validarChecks(check){
+      num =0;
+      var checks = document.getElementsByName('guisados');
+      for(var i=0;i<checks.length;i++){
+        if(checks[i].checked){
+          num++;
+        }
+      }
+      if(num>3){
+        check.checked=false;
+        Materialize.toast('Solo se pueden elegir 3 guisados como máximo! :) ',6000);
+      }
+    }
+
+    var mostrarResumen = function(){
+      var texto = 'Taco Armado: ';
+
+      if(document.getElementById('una').selected){
+        texto = texto + ' una tortilla, ';
+      }else {
+        texto = texto + ' dos tortillas, ';
+      }
+      if(document.getElementById('blanco').selected){
+        texto = texto + 'arroz blanco, ';
+      }else {
+        texto = texto + 'arroz rojo, ';
+      }
+      if(document.getElementById('milanesapollo').checked){
+        texto = texto + 'milanesa de pollo, ';
+      }
+      if(document.getElementById('milanesares').checked){
+        texto = texto + 'milanesa de res, ';
+      }
+      if(document.getElementById('tortapapa').checked){
+        texto = texto + 'torta de papa, ';
+      }
+      if(document.getElementById('tortacarne').checked){
+        texto = texto + 'torta de carne, ';
+      }
+      if(document.getElementById('huevo').checked){
+        texto = texto + 'huevo cocido, ';
+      }
+      if(document.getElementById('chile').checked){
+        texto = texto + 'chile relleno, ';
+      }
+      if(document.getElementById('chicharron').checked){
+        texto = texto + 'chicharron con salsa, ';
+      }
+      if(document.getElementById('manita').checked){
+        texto = texto + 'manita de puerco, ';
+      }
+      if(document.getElementById('mole').checked){
+        texto = texto + 'mole, ';
+      }
+      if(document.getElementById('verde').selected){
+        texto = texto + 'salsa verde.';
+      }
+      if(document.getElementById('roja').selected){
+        texto = texto + 'salsa roja.';
+      }else{
+        texto = texto + 'sin salsa.';
+      }
+      Materialize.toast(texto, 8000);
+    }
+
+  </script>
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  </body>
+</html>
